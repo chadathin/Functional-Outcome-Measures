@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<form action="/score" method="POST" name="NDI">
+    <div name="measure" >
+        <p>QUESTION 1</p>
+        <input type="radio" value="1" name="q1">1
+        <input type="radio" value="2" name="q1">2
+        <input type="radio" value="3" name="q1">3
+        <input type="radio" value="4" name="q1">4
+        <br><br>
+        <p>Question 2</p>
+        <input type="radio" value="1" name="q2">1
+        <input type="radio" value="2" name="q2">2
+        <input type="radio" value="3" name="q2">3
+        <input type="radio" value="4" name="q2">4
+        <br><br>
+        <p>Question 3</p>
+        <input type="radio" value="1" name="q3">1
+        <input type="radio" value="2" name="q3">2
+        <input type="radio" value="3" name="q3">3
+        <input type="radio" value="4" name="q3">4
+        <br><br>
+    </div>
+    <div name="measure2">
+        <p>QUESTION 4</p>
+        <input type="radio" value="1" name="q4">1
+        <input type="radio" value="2" name="q4">2
+        <input type="radio" value="3" name="q4">3
+        <input type="radio" value="4" name="q4">4
+        <br><br>
+    </div>
+
+
+
+    <button type="submit"> SCORE </button>
+</form>
+
+{% endblock main_content %}
