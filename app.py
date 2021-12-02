@@ -7,9 +7,14 @@ app = Flask(__name__,
             template_folder='templates')
 app.secret_key = "tis_but_a_key"
 
+avail_assessments = {
+    "KOOS JR": '/koos',
+    "ODI": "/odi"
+}
+
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("base.html", header="How it works", available=avail_assessments)
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
@@ -27,14 +32,16 @@ def result():
             results.append(int(submission[question]))
 
         result = sum(results)
-        return render_template("results_page.html", result=result, assessment=assessment)
+
+        print(avail_assessments)
+        return render_template("results_page.html", result=result, assessment=assessment, header="Results", available=avail_assessments)
     else:
         return "No assessment performed!"
 
 @app.route("/koos", methods=["POST", "GET"])
 def koos():
-    session['assessment'] = "koos"
-    return render_template("koos.html")
+    session['assessment'] = "KOOS JR"
+    return render_template("koos.html", header = "KOOS JR", available=avail_assessments)
 
 
 if __name__ == "__main__":
