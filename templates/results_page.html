@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block main_content %}
 
-<h3>Your {{ assessment }} result: {{ result }}</h3>
+<div class="result-header">
+    <h3>Your {{ assessment }} result: {{ result }}</h3>
+</div>
+
+<div class="to-save">
+    <div class="save-instruction">
+        <span>If you would like to save this score, click "Save It" below.</span><br>
+
+    </div>
+</div>
+<form action="/store_result" method="POST" class="form-control">
+    <div id="access-code" value="{{ ident }}">
+        {{ ident }}
+    </div>
+    <br>
+    <span><em>Copy/Paste this code to access or update this score later!</em> </span>
+    <button type="submit" class="btn btn-primary">Save it!</button>
+
+</form>
 
 {% endblock main_content %}
