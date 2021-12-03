@@ -3,7 +3,7 @@ from flask_mysqldb import MySQL
 # import db_config
 
 app = Flask(__name__,
-            static_folder='assets',
+            static_folder='static',
             template_folder='templates')
 app.secret_key = "tis_but_a_key"
 

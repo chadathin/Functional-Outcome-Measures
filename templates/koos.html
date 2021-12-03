@@ -4,11 +4,17 @@
 
 <form class="form-control" action="/result" method="POST" >
 
-    <h4>Stiffness</h4>
-    <span>How severe is your knee stiffness after first wakening in the morning?</span><br>
+    <div class="section-header">
+        <h4>Stiffness</h4>
+        <em>Stiffness is a sensation of restriction or slowness in the ease of which you move your knee joint.</em><br>
+        <span class="instructions">
+            The following question concerns the amount of joint stiffness you have experienced during the <b>last week</b> in your knee.
+        </span>
+    </div>
 
-    <div class="btn-group">
-
+    <div id="question-1" class="question-group">
+        <span>1. How severe is your knee stiffness after first wakening in the morning?</span><br>
+        <div class="btn-group">
             <input type="radio" class="btn-check" autocomplete="off" value="0" id="1-1" name="q1">
             <label for="1-1" class="btn btn-outline-primary">None</label>
 
@@ -23,33 +29,152 @@
 
             <input type="radio" class="btn-check" autocomplete="off" value="4" id="1-5" name="q1">
             <label for="1-5" class="btn btn-outline-primary">Extreme</label>
+        </div>
     </div>
 
-    <br><br>
-    <p>Question 2</p>
-    <input type="radio" value="1" name="q2">1
-    <input type="radio" value="2" name="q2">2
-    <input type="radio" value="3" name="q2">3
-    <input type="radio" value="4" name="q2">4
-    <br><br>
-    <p>Question 3</p>
-    <input type="radio" value="1" name="q3">1
-    <input type="radio" value="2" name="q3">2
-    <input type="radio" value="3" name="q3">3
-    <input type="radio" value="4" name="q3">4
-    <br><br>
+    <div class="section-header">
+        <h4>Pain</h4>
+        <span class="instructions">
+            What amount of knee pain have you experienced in the <b>last week</b> during the following activities? <br>
+        </span>
+    </div>
 
-    <p>QUESTION 4</p>
-    <input type="radio" value="1" name="q4">1
-    <input type="radio" value="2" name="q4">2
-    <input type="radio" value="3" name="q4">3
-    <input type="radio" value="4" name="q4">4
-    <br><br>
+    <div id="question-2" class="question-group">
+        <span>2. Twisting/Pivoting on your knee</span><br>
+        <div class="btn-group">
 
+            <input type="radio" class="btn-check" autocomplete="off" value="0" id="2-1" name="q2">
+            <label for="2-1" class="btn btn-outline-primary">None</label>
 
+            <input type="radio" class="btn-check" autocomplete="off" value="1" id="2-2" name="q2">
+            <label for="2-2" class="btn btn-outline-primary">Mild</label>
 
+            <input type="radio" class="btn-check" autocomplete="off" value="2" id="2-3" name="q2">
+            <label for="2-3" class="btn btn-outline-primary">Moderate</label>
 
-    <button type="submit"> SCORE </button>
+            <input type="radio" class="btn-check" autocomplete="off" value="3" id="2-4" name="q2">
+            <label for="2-4" class="btn btn-outline-primary">Severe</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="4" id="2-5" name="q2">
+            <label for="2-5" class="btn btn-outline-primary">Extreme</label>
+        </div>
+    </div>
+
+    <div id="question-3" class="question-group">
+        <span>3. Straightening knee fully</span><br>
+        <div class="btn-group">
+
+            <input type="radio" class="btn-check" autocomplete="off" value="0" id="3-1" name="q3">
+            <label for="3-1" class="btn btn-outline-primary">None</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="1" id="3-2" name="q3">
+            <label for="3-2" class="btn btn-outline-primary">Mild</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="2" id="3-3" name="q3">
+            <label for="3-3" class="btn btn-outline-primary">Moderate</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="3" id="3-4" name="q3">
+            <label for="3-4" class="btn btn-outline-primary">Severe</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="4" id="3-5" name="q3">
+            <label for="3-5" class="btn btn-outline-primary">Extreme</label>
+        </div>
+    </div>
+
+    <div id="question-4" class="question-group">
+        <span>4. Going up or down stairs</span><br>
+        <div class="btn-group">
+
+            <input type="radio" class="btn-check" autocomplete="off" value="0" id="4-1" name="q4">
+            <label for="4-1" class="btn btn-outline-primary">None</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="1" id="4-2" name="q4">
+            <label for="4-2" class="btn btn-outline-primary">Mild</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="2" id="4-3" name="q4">
+            <label for="4-3" class="btn btn-outline-primary">Moderate</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="3" id="4-4" name="q4">
+            <label for="4-4" class="btn btn-outline-primary">Severe</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="4" id="4-5" name="q4">
+            <label for="4-5" class="btn btn-outline-primary">Extreme</label>
+        </div>
+    </div>
+
+    <div id="question-5" class="question-group">
+        <span>5. Standing upright</span><br>
+        <div class="btn-group">
+
+            <input type="radio" class="btn-check" autocomplete="off" value="0" id="5-1" name="q5">
+            <label for="5-1" class="btn btn-outline-primary">None</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="1" id="5-2" name="q5">
+            <label for="5-2" class="btn btn-outline-primary">Mild</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="2" id="5-3" name="q5">
+            <label for="5-3" class="btn btn-outline-primary">Moderate</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="3" id="5-4" name="q5">
+            <label for="5-4" class="btn btn-outline-primary">Severe</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="4" id="5-5" name="q5">
+            <label for="5-5" class="btn btn-outline-primary">Extreme</label>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <h4>Function, daily living</h4>
+        <span class="instructions">
+            The following questions concern your physical function. By this we mean your ability to move around and to
+            look after yourself. For each of the following activities please indicate the degree of difficulty you have
+            experienced in the last week due to your knee<br>
+        </span>
+    </div>
+
+    <div id="question-6" class="question-group">
+        <span>6. Rising from sitting</span><br>
+        <div class="btn-group">
+
+            <input type="radio" class="btn-check" autocomplete="off" value="0" id="6-1" name="q6">
+            <label for="6-1" class="btn btn-outline-primary">None</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="1" id="6-2" name="q6">
+            <label for="6-2" class="btn btn-outline-primary">Mild</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="2" id="6-3" name="q6">
+            <label for="6-3" class="btn btn-outline-primary">Moderate</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="3" id="6-4" name="q6">
+            <label for="6-4" class="btn btn-outline-primary">Severe</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="4" id="6-5" name="q6">
+            <label for="6-5" class="btn btn-outline-primary">Extreme</label>
+        </div>
+    </div>
+
+    <div id="question-7" class="question-group">
+        <span>7. Bending to floor/pick up an object</span><br>
+        <div class="btn-group">
+
+            <input type="radio" class="btn-check" autocomplete="off" value="0" id="7-1" name="q7">
+            <label for="7-1" class="btn btn-outline-primary">None</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="1" id="7-2" name="q7">
+            <label for="7-2" class="btn btn-outline-primary">Mild</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="2" id="7-3" name="q7">
+            <label for="7-3" class="btn btn-outline-primary">Moderate</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="3" id="7-4" name="q7">
+            <label for="7-4" class="btn btn-outline-primary">Severe</label>
+
+            <input type="radio" class="btn-check" autocomplete="off" value="4" id="7-5" name="q6">
+            <label for="6-5" class="btn btn-outline-primary">Extreme</label>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit"> Score it! </button>
 </form>
 
 {% endblock main_content %}
